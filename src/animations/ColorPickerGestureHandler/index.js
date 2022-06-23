@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback } from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import Animated, {

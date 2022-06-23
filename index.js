@@ -11,7 +11,9 @@ import { AppRegistry } from 'react-native';
 // import PinchGestureHandler from './src/animations/PinchGestureHandler';
 // import DoubleTap from './src/animations/DoubleTap';
 // import ScrollViewFromScratch from './src/animations/ScrollViewFromScratch';
-import ColorPickerGestureHandler from './src/animations/ColorPickerGestureHandler';
+// import ColorPickerGestureHandler from './src/animations/ColorPickerGestureHandler';
+// import CircleAnimationProps from './src/animations/CircleAnimationProps';
+import DragToDelete from './src/animations/DragToDelete';
 import { name as appName } from './app.json';
 
-AppRegistry.registerComponent(appName, () => ColorPickerGestureHandler);
+AppRegistry.registerComponent(appName, () => DragToDelete);
