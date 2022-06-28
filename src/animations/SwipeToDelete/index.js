@@ -15,7 +15,7 @@ const TASKS = TITLES.map((title, index) => ({ title, index }));
 
 const BACKGROUND_COLOR = '#fafbff';
 
-const DragToDelete = () => {
+const SwipeToDelete = () => {
   const scrollRef = useRef();
   const [tasks, setTasks] = useState(TASKS);
 
@@ -41,7 +41,7 @@ const DragToDelete = () => {
   );
 };
 
-export default DragToDelete;
+export default SwipeToDelete;
 
 const styles = StyleSheet.create({
   container: {
