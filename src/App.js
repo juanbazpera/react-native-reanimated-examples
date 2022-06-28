@@ -58,7 +58,7 @@ const App = () => {
           component={RippleButton}
         />
         <Stack.Screen
-          options={{ title: 'Perspective Menu' }}
+          options={{ title: 'Perspective Menu', headerShown: false }}
           name="perspectiveMenu"
           component={PerspectiveMenu}
         />
