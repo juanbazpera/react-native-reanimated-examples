@@ -9,6 +9,7 @@ import InterpolateColor from './animations/InterpolateColor';
 import CircleAnimationProps from './animations/CircleAnimationProps';
 import SwipeToDelete from './animations/SwipeToDelete';
 import RippleButton from './animations/RippleButton';
+import PerspectiveMenu from './animations/PerspectiveMenu';
 
 const Stack = createNativeStackNavigator();
 
@@ -55,6 +56,11 @@ const App = () => {
           options={{ title: 'Ripple' }}
           name="ripple"
           component={RippleButton}
+        />
+        <Stack.Screen
+          options={{ title: 'Perspective Menu' }}
+          name="perspectiveMenu"
+          component={PerspectiveMenu}
         />
       </Stack.Navigator>
     </NavigationContainer>

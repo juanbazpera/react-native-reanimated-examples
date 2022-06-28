@@ -1,14 +1,17 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Ripple from './Ripple';
 
 const RippleButton = () => {
   return (
-    <View style={styles.container}>
-      <Ripple style={styles.ripple} onTap={() => console.log('Tap')}>
-        <Text style={styles.text}>Tap</Text>
-      </Ripple>
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <Ripple style={styles.ripple} onTap={() => console.log('Tap')}>
+          <Text style={styles.text}>Tap</Text>
+        </Ripple>
+      </View>
+    </GestureHandlerRootView>
   );
 };
 

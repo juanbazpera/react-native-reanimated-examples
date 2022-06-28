@@ -6,48 +6,70 @@ const Home = () => {
   const { navigate } = useNavigation();
   return (
     <View style={styles.container}>
-      <Button
-        title="Basic"
-        onPress={() => {
-          navigate('basic');
-        }}
-      />
-      <Button
-        title="PanGestureHandler"
-        onPress={() => {
-          navigate('panGestureHandler');
-        }}
-      />
-      <Button
-        title="ScrollView from Scratch"
-        onPress={() => {
-          navigate('scrollView');
-        }}
-      />
-      <Button
-        title="Interpolate colors"
-        onPress={() => {
-          navigate('colors');
-        }}
-      />
-      <Button
-        title="Circular Progress Bar"
-        onPress={() => {
-          navigate('progress');
-        }}
-      />
-      <Button
-        title="Swipe to delete"
-        onPress={() => {
-          navigate('swipeToDelete');
-        }}
-      />
-      <Button
-        title="Ripple Button"
-        onPress={() => {
-          navigate('ripple');
-        }}
-      />
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Basic"
+          onPress={() => {
+            navigate('basic');
+          }}
+        />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="PanGestureHandler"
+          onPress={() => {
+            navigate('panGestureHandler');
+          }}
+        />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="ScrollView from Scratch"
+          onPress={() => {
+            navigate('scrollView');
+          }}
+        />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Interpolate colors"
+          onPress={() => {
+            navigate('colors');
+          }}
+        />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Circular Progress Bar"
+          onPress={() => {
+            navigate('progress');
+          }}
+        />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Swipe to delete"
+          onPress={() => {
+            navigate('swipeToDelete');
+          }}
+        />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Ripple Button"
+          onPress={() => {
+            navigate('ripple');
+          }}
+        />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Perspective Menu"
+          onPress={() => {
+            navigate('perspectiveMenu');
+          }}
+        />
+      </View>
     </View>
   );
 };
@@ -59,5 +81,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     paddingVertical: 20,
+  },
+  buttonContainer: {
+    marginTop: 10,
   },
 });

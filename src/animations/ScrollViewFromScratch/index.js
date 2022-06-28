@@ -1,6 +1,9 @@
 import React from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
-import { PanGestureHandler } from 'react-native-gesture-handler';
+import {
+  GestureHandlerRootView,
+  PanGestureHandler,
+} from 'react-native-gesture-handler';
 import Animated, {
   cancelAnimation,
   useAnimatedGestureHandler,
@@ -24,9 +27,9 @@ const ScrollViewFromScratch = () => {
 
   const panGestureEvent = useAnimatedGestureHandler({
     onStart: (_, context) => {
+      cancelAnimation(translateX);
       context.translateX = clampedTranslateX.value;
       // TODO: We need to stop the previous animation, when we scroll a lot
-      cancelAnimation(translateX);
     },
     onActive: (event, context) => {
       translateX.value = event.translationX + context.translateX;
@@ -37,20 +40,22 @@ const ScrollViewFromScratch = () => {
   });
 
   return (
-    <View style={styles.container}>
-      <PanGestureHandler onGestureEvent={panGestureEvent}>
-        <Animated.View style={[styles.animatedView]}>
-          {titles.map((title, index) => (
-            <Page
-              key={index.toString()}
-              translateX={clampedTranslateX}
-              index={index}
-              title={title}
-            />
-          ))}
-        </Animated.View>
-      </PanGestureHandler>
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <PanGestureHandler onGestureEvent={panGestureEvent}>
+          <Animated.View style={[styles.animatedView]}>
+            {titles.map((title, index) => (
+              <Page
+                key={index.toString()}
+                translateX={clampedTranslateX}
+                index={index}
+                title={title}
+              />
+            ))}
+          </Animated.View>
+        </PanGestureHandler>
+      </View>
+    </GestureHandlerRootView>
   );
 };
 

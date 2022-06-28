@@ -1,6 +1,9 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import {
+  GestureHandlerRootView,
+  ScrollView,
+} from 'react-native-gesture-handler';
 import ListItem from './ListItem';
 
 const TITLES = [
@@ -25,18 +28,20 @@ const SwipeToDelete = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="default" />
-      <Text style={styles.title}>Tasks</Text>
-      <ScrollView ref={scrollRef} style={styles.scrollStyle}>
-        {tasks.map(task => (
-          <ListItem
-            key={task.index}
-            task={task}
-            onDismiss={onDismiss}
-            simultaneousHandlers={scrollRef}
-          />
-        ))}
-      </ScrollView>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <StatusBar barStyle="default" />
+        <Text style={styles.title}>Tasks</Text>
+        <ScrollView ref={scrollRef} style={styles.scrollStyle}>
+          {tasks.map(task => (
+            <ListItem
+              key={task.index}
+              task={task}
+              onDismiss={onDismiss}
+              simultaneousHandlers={scrollRef}
+            />
+          ))}
+        </ScrollView>
+      </GestureHandlerRootView>
     </SafeAreaView>
   );
 };
