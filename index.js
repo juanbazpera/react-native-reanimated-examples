@@ -13,7 +13,8 @@ import { AppRegistry } from 'react-native';
 // import ScrollViewFromScratch from './src/animations/ScrollViewFromScratch';
 // import ColorPickerGestureHandler from './src/animations/ColorPickerGestureHandler';
 // import CircleAnimationProps from './src/animations/CircleAnimationProps';
-import DragToDelete from './src/animations/DragToDelete';
+// import DragToDelete from './src/animations/DragToDelete';
+import RippleButton from './src/animations/RippleButton';
 import { name as appName } from './app.json';
 
-AppRegistry.registerComponent(appName, () => DragToDelete);
+AppRegistry.registerComponent(appName, () => RippleButton);
