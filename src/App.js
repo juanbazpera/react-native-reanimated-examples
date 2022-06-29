@@ -12,6 +12,7 @@ import RippleButton from './animations/RippleButton';
 import PerspectiveMenu from './animations/PerspectiveMenu';
 import SlidingCounter from './animations/SlidingCounter';
 import ClockLoader from './animations/ClockLoader';
+import LayoutAnimation from './animations/LayoutAnimation';
 
 const Stack = createNativeStackNavigator();
 
@@ -73,6 +74,11 @@ const App = () => {
           options={{ title: 'Clock Loader', headerShown: false }}
           name="clock"
           component={ClockLoader}
+        />
+        <Stack.Screen
+          options={{ title: 'Layout Animation' }}
+          name="layout"
+          component={LayoutAnimation}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -86,6 +86,14 @@ const Home = () => {
           }}
         />
       </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Layout Animation"
+          onPress={() => {
+            navigate('layout');
+          }}
+        />
+      </View>
     </View>
   );
 };
