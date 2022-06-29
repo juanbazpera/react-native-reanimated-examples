@@ -70,6 +70,14 @@ const Home = () => {
           }}
         />
       </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Sliding Counter"
+          onPress={() => {
+            navigate('slidingCounter');
+          }}
+        />
+      </View>
     </View>
   );
 };

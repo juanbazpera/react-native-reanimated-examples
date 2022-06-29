@@ -10,6 +10,7 @@ import CircleAnimationProps from './animations/CircleAnimationProps';
 import SwipeToDelete from './animations/SwipeToDelete';
 import RippleButton from './animations/RippleButton';
 import PerspectiveMenu from './animations/PerspectiveMenu';
+import SlidingCounter from './animations/SlidingCounter';
 
 const Stack = createNativeStackNavigator();
 
@@ -61,6 +62,11 @@ const App = () => {
           options={{ title: 'Perspective Menu', headerShown: false }}
           name="perspectiveMenu"
           component={PerspectiveMenu}
+        />
+        <Stack.Screen
+          options={{ title: 'Sliding Counter', headerShown: false }}
+          name="slidingCounter"
+          component={SlidingCounter}
         />
       </Stack.Navigator>
     </NavigationContainer>
