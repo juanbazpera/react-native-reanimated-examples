@@ -11,6 +11,7 @@ import SwipeToDelete from './animations/SwipeToDelete';
 import RippleButton from './animations/RippleButton';
 import PerspectiveMenu from './animations/PerspectiveMenu';
 import SlidingCounter from './animations/SlidingCounter';
+import ClockLoader from './animations/ClockLoader';
 
 const Stack = createNativeStackNavigator();
 
@@ -67,6 +68,11 @@ const App = () => {
           options={{ title: 'Sliding Counter', headerShown: false }}
           name="slidingCounter"
           component={SlidingCounter}
+        />
+        <Stack.Screen
+          options={{ title: 'Clock Loader', headerShown: false }}
+          name="clock"
+          component={ClockLoader}
         />
       </Stack.Navigator>
     </NavigationContainer>

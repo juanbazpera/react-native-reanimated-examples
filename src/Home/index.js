@@ -78,6 +78,14 @@ const Home = () => {
           }}
         />
       </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Clock Loader"
+          onPress={() => {
+            navigate('clock');
+          }}
+        />
+      </View>
     </View>
   );
 };
